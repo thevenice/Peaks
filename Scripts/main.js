@@ -2,14 +2,13 @@
 
 $(document).ready(function() {
   var $nav = $('nav');
-  $nav.hide();
 
   $(function() {
     $(window).scroll(function() {
       if ($(this).scrollTop() > $nav.height()) {
-        $nav.slideDown(300);
+        $nav.addClass("scrolled");
       } else {
-        $nav.slideUp(300);
+        $nav.removeClass("scrolled");
       }
     });
   });

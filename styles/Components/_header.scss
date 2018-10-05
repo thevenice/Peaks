@@ -3,17 +3,21 @@
 // Desktop - Navigation
 
 nav {
-  @include shadow(2);
-
-  background: $white;
   color: $black;
   font-family: 'brother';
   height: 60px;
   line-height: 60px;
   position: fixed;
   top: 0;
+  transition: 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
   width: 100vw;
   z-index: 10;
+
+  &.scrolled {
+    @include shadow(2);
+
+    background: $white;
+  }
 
   ul {
     float: right;
