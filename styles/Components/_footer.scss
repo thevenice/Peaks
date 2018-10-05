@@ -1,0 +1,38 @@
+footer {
+  background-color: $white;
+  box-sizing: border-box;
+  color: $black;
+  display: grid;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+
+  svg {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    width: 20px;
+  }
+
+  .social svg {
+    width: 2rem;
+  }
+
+  .signature {
+    padding-top: 0.5rem;
+
+    h5 {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+
+  .josh {
+    color: $red;
+  }
+
+  .heart {
+    animation: pound 0.35s infinite alternate;
+    width: 16px;
+  }
+}

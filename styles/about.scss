@@ -1,0 +1,206 @@
+@import 'Components/base';
+
+.intro {
+  align-items: center;
+  background: radial-gradient(circle, $orange 0%, $red 100%);
+  display: flex;
+  height: 75vh;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    margin: 1rem 0 0;
+  }
+
+  h4 {
+    margin-top: 4px;
+  }
+
+  img {
+    width: 8rem;
+  }
+
+  @media (max-width: 720px) {
+    font-size-adjust: 0.42;
+
+    img {
+      width: 6rem;
+    }
+  }
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  h2 {
+    text-align: center;
+  }
+
+  span {
+    background: $black;
+    border-radius: 3px;
+    display: inline-block;
+    height: 42px;
+    padding-right: 5%;
+    position: absolute;
+  }
+
+  em {
+    color: $black;
+    font: 15px 'Brother', sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    position: relative;
+    text-transform: uppercase;
+    top: -44px;
+  }
+
+  svg {
+    width: 4rem;
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 36px;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 60px;
+  }
+
+  article {
+    @include shadow(3);
+
+    background-color: $white;
+    border-radius: 4px;
+    margin: 5%;
+    padding: 0.5rem 2rem;
+  }
+
+  .chart {
+    grid-column: 1 / 3;
+    margin: 1rem;
+    text-align: center;
+
+    svg {
+      font-size: 4rem;
+    }
+  }
+
+  .bar {
+    background: #ccc;
+    border-radius: 3px;
+    height: 42px;
+    position: relative;
+
+    p {
+      font-size: 0.8rem;
+      font-style: italic;
+      position: relative;
+      top: -46px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .title {
+      height: 130px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+
+    .chart {
+      grid-column: 1 / 2;
+    }
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  p {
+    height: 108px;
+    padding: 0 1rem;
+  }
+
+  article {
+    @include shadow(2);
+
+    background-color: $white;
+    color: $black;
+    margin: 5%;
+    text-align: center;
+
+    div {
+      height: 15vh;
+    }
+  }
+
+  svg {
+    width: 4rem;
+  }
+
+  .button {
+    margin-bottom: 1.4rem;
+  }
+
+  .edit {
+    grid-column: 1 / 4;
+    margin: 1rem 0 2rem;
+    text-align: center;
+
+    svg {
+      font-size: 4rem;
+    }
+  }
+
+  .magmo {
+    div {
+      background: $cyan;
+
+      &.visible {
+        background: url('../images/magmo.jpg') (center / cover);
+      }
+    }
+  }
+
+  .mlg {
+    div {
+      background: $red;
+
+      &.visible {
+        background: url('../images/mlg.jpg') (center / cover);
+      }
+    }
+  }
+
+  .coming {
+    div {
+      background: $black;
+
+      &.visible {
+        background: url('../images/coming.jpg') (center / cover);
+      }
+    }
+  }
+
+  @media (min-width: 680px) and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+
+    .edit {
+      grid-column: 1 / 3;
+    }
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+
+    .edit {
+      grid-column: 1 / 2;
+    }
+  }
+}

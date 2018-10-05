@@ -1,0 +1,32 @@
+@font-face {
+  font-display: auto;
+  font-family: Brother;
+  src: url('../fonts/Brother.woff2');
+}
+
+@font-face {
+  font-display: auto;
+  font-family: Zilla;
+  src: url('../fonts/Zilla.woff2');
+}
+
+@font-face {
+  font-display: auto;
+  font-family: Quicksand;
+  src: url('../fonts/Quicksand.woff2');
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  font-family: 'Brother';
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+@import 'Components/base';
+
+section {
+  align-items: center;
+  background: url('../images/errorMain.jpg') scroll (center / cover);
+  display: flex;
+  height: calc(100vh - 150px);
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  color: $white;
+  font-family: 'Brother', sans-serif;
+  font-size: 6rem;
+  text-shadow: 2px 2px $black;
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 3rem;
+  }
+}

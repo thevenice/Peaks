@@ -1,0 +1,116 @@
+{% embed 'partials/base.html.twig' %}
+
+    {% block stylesheets %}
+        {% do 
+            assets.addCss('theme://styles/about.css', {
+                'priority': 100,
+                'loading': 'inline',
+                'type': 'text/css',
+                'rel': 'stylesheet'
+            }) %}
+    {% endblock %}
+
+    {% block content %}
+        <section class="intro">
+            <div>
+                <img src="{{ url('theme://images/me.png') }}" alt="portrait" data-aos="flip-up" data-aos-duration="900" data-aos-easing="ease">
+                <h1>Josh Taylor</h1>
+                <h4>I am very, very bored</h4>
+            </div>
+        </section>
+        <section class="progress">
+            <div class="chart">
+                <h2>Progress</h2>
+                <h4>What I've learnt and learning</h4>
+                <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+                    <path fill="currentColor" d="M500 384c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v308h436zM456 96H344c-21.4 0-32.1 25.9-17 41l32.9 32.9-72 72.9-55.6-55.6c-4.7-4.7-12.2-4.7-16.9 0L96.4 305c-4.7 4.6-4.8 12.2-.2 16.9l28.5 29.4c4.7 4.8 12.4 4.9 17.1.1l82.1-82.1 55.5 55.5c4.7 4.7 12.3 4.7 17 0l109.2-109.2L439 249c15.1 15.1 41 4.4 41-17V120c0-13.3-10.7-24-24-24z"></path>
+                </svg>
+            </div>
+
+            <article data-aos="fade-up" data-aos-duration="750">
+                <div class="bars">
+                    <ul>
+                        <li class="title">
+                            <h2>Front End Web Development</h2>
+                            <p>Front end development is coding and creating the visual front-end elements of a website</p>
+                        </li>
+                        <li class="bar">
+                            <span style="width:95%; background-color:#00b358;"></span>
+                            <em>HTML - 100%</em>
+                            <p>I wish JS was this easy</p>
+                        </li>
+                        <li class="bar">
+                            <span style="width:85%; background-color:#74e600"></span>
+                            <em>CSS - 90%</em>
+                            <p>Thank you Scss</p>
+                        </li>
+                        <li class="bar">
+                            <span style="width:60%; background-color:#ffea00"></span>
+                            <em>JS - 65%</em>
+                            <p>No thanks</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article data-aos="fade-up" data-aos-duration="750">
+                <div class="bars">
+                    <ul>
+                        <li class="title">
+                            <h2>Object-Oriented Programming</h2>
+                            <p>Object-oriented programming is a programming paradigm based on the concept of objects</p>
+                        </li>
+                        <li class="bar">
+                            <span style="width:70%; background-color:#74e600;"></span>
+                            <em>Java - 75%</em>
+                            <p>There is a update avaliable... again</p>
+                        </li>
+                        <li class="bar">
+                            <span style="width:35%; background-color:#ffea00"></span>
+                            <em>C# - 30%</em>
+                            <p>I'm getting there okay</p>
+                        </li>
+                        <li class="bar">
+                            <span style="width:0%;"></span>
+                            <em>Nothing - 0%</em>
+                            <p>Not sure what to learn</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section class="projects">
+            <div class="edit">
+                <h2>Projects</h2>
+                <h4>What I've done and what I'm doing</h4>
+                <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+                    <path fill="currentColor" d="M316.08 82.71l-297 296.96L.32 487.11c-2.53 14.49 10.09 27.11 24.59 24.56l107.45-18.84L429.28 195.9 316.08 82.71zm181.85 44.53c18.75-18.76 18.75-49.17 0-67.93l-45.26-45.25c-18.76-18.76-49.18-18.76-67.94 0L338.7 60.08l113.2 113.2 46.03-46.04zm-41.18 264.38c-6.59 0-12.24-3.77-14.59-9.98-18.13-47.78-48.4-65.38-82.65-70.71L257.83 412.61C266.64 475.95 315.42 512 384 512c90.07 0 128-72.38 128-154.73-9.79 6.68-44.14 34.35-55.25 34.35zm-336.57-158.3L216 137.51 146.01 33.1C84.05-55.3-52.15 52.52 21.08 132.99l99.1 100.33z"></path>
+                </svg>
+            </div>
+            <article class="magmo" data-aos="fade-up" data-aos-duration="500">
+                <div img-defer="img-defer"></div>
+                <h2>MAGMO</h2>
+                <p>Magmo is just something I created so I could practice, I've remade this site about 10 times. I'm going to publish this websites sourcecode on Gitlab once its done so check back here</p>
+                <a href="https://magmo.co.uk" class="button">Check it out here</a>
+            </article>
+            <article class="mlg" data-aos="fade-up" data-aos-duration="700">
+                <div img-defer="img-defer"></div>
+                <h2>Max Level Games</h2>
+                <p>Made this website a little while ago for a friend, still not done but it was my first attempt at design and making a full website. Looking back at the code it's a little embarrasing - maybe I'll remake it</p>
+                <a href="https://maxlevelstudios.com" class="button">Check it out here</a>
+            </article>
+            <article class="coming" data-aos="fade-up" data-aos-duration="900">
+                <div img-defer="img-defer"></div>
+                <h2>What's next</h2>
+                <p>I'm going to be focusing on Java and C# project for the immenent future so my new projects will likely be on Gitlab</p>
+                <a href="https://gitlab.com/broccolai" class="button">Check it out here</a>
+            </article>
+        </section>
+
+    {% endblock %}
+
+    {% block script %}
+        {% do 
+            assets.addInlineJs("AOS.init();") %}
+    {% endblock %}
+
+{% endembed %}

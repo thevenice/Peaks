@@ -1,0 +1,63 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+    <head>
+        {% block head %}
+            <title>
+                {% if header.title %}{{ header.title|e('html') }}
+                    |
+                {% endif %}{{ site.title|e('html') }}</title>
+
+            {% include 'partials/metadata.html.twig' %}
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+            <meta name="google-site-verification" content="8bXw_PNcRoGA3CelNzToe0cq6mZ3NRzT_htCm9mXEqI"/>
+            <link rel="canonical" href="{{ page.url(true, true) }}"/>
+
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://images/favicons/apple-touch-icon.png') }}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ url('theme://images/favicons/favicon-32x32.png') }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ url('theme://images/favicons/favicon-16x16.png') }}">
+            <link rel="manifest" href="{{ url('theme://images/favicons/site.webmanifest') }}">
+            <link rel="mask-icon" href="{{ url('theme://images/favicons/safari-pinned-tab.svg') }}" color="#06d6a0">
+            <link rel="shortcut icon" href="{{ url('theme://images/favicons/favicon.ico') }}">
+            <meta name="msapplication-TileColor" content="#f7f7f2">
+            <meta name="msapplication-config" content="{{ url('theme://images/favicons/browserconfig.xml') }}">
+            <meta name="theme-color" content="#f7f7f2">
+
+            {% block stylesheets %}{% endblock %}
+
+            {{ assets.css() }}
+
+        {% endblock head %}
+    </head>
+    <body>
+
+        {% include 'partials/header.html.twig' %}
+
+        {% block content %}{% endblock %}
+
+        {% include 'partials/footer.html.twig' %}
+
+        <!-- <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <script> (adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-5701722451979426", enable_page_level_ads: true}); </script> -->
+
+        {% do 
+            assets.addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', {'priority': 20}) %}
+        {% do 
+            assets.addJs('https://unpkg.com/aos@next/dist/aos.js', {'priority': 18}) %}
+        {% do 
+            assets.addJs('theme://scripts/Main.min.js', {
+                'priority': 17,
+                'loading': 'inline'
+            }) %}
+        {# {% do 
+            assets.addJs('https://pro.fontawesome.com/releases/v5.2.0/js/all.js', {
+                'priority': 16,
+                'loading': 'defer'
+            }) %} #}
+
+        {% block script %}{% endblock %}
+
+        {{ assets.js() }}
+
+    </body>
+</html>
